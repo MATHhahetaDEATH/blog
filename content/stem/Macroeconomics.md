@@ -20,7 +20,7 @@ publish: true
 2. Dynamics of $k$: $\dot{k}(t)=sf(k(t))-(n+g+\delta)k(t)$, actual investment - breakeven investment. 
 	1. To satisfy the assumptions above, there must be one and only one intersect of actual and breakeven investment, the point of convergence $k^*$. 
 	2. *Balanced growth path*: each variable of the model is growing at a constant rate(deduced from the condition $k=k^*$). 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg!https://img.ksmtang.com/obsidian/fallback.jpeg
 3. Impact of change in the saving rate: A permanent increase in the saving rate $s$ lifts the curve of actual investment(thus the value of $k^*$ rises, the balanced growth path changes). 
 	1. Output: produces a temporary increase in the growth rate of $\frac{Y}{L}$ and $\dot{k}$. *Level effect* instead of *Growth effect*. (only technological progress have growth effect)
 	2. Consumption: $c=(1-s)f(k)$ decreases immediately then rise slowly with the increase of $f(k)$ until $c^* = f(k^*)-(n+g+\delta)k^*$. Since $\frac{ \partial c^* }{ \partial s }=(f'(k^*)-(n+g+\delta)) \frac{ \partial k^* }{ \partial s }$ where $\frac{ \partial k^* }{ \partial s } >0$, $c^*$ increases iff $f'(k^*)$(the marginal product of capital) exceeds $n+g+\delta$. As $s$ increases from a low value, consumption first increases then decreases, reaching its peak when $s$ makes $\frac{ \partial c^* }{ \partial s }=0$(the corresponding value of $k^*$=the *golden-rule* level). 
@@ -56,18 +56,18 @@ publish: true
 	1. $c$: $\frac{\dot{c}(t)}{c(t)} = \frac{f'(k(t))-\rho-\theta g}{\theta}$. Let $k=k^*$ when $\dot{c}(t)=0$. Then $c$ is rising when $k<k^*$, falling when $k>k^*$. 
 	2. $k$: $\dot{k}(t)=f(k(t))-c(t)-(n+g)k(t)$. $c$ is rising in $k$ when $\dot{k} >0$, falling when $\dot{k}<0$. 
 	3. The phase diagram(given initial values of $c,k$): Here the peak of the $\dot{k}=0$ curve is $k_{GR}$ which satisfies $f'(k_{GR})=n+g$(when $c$ reaches its peak under the condition of equilibrium). Since $\beta >0$ and $f'$ is decreasing in $k$, $k^*<k_{GR}$. The origin, intersection of $c=0$ and $\dot{k}=0$ and E are stationary point($\dot{c}=\dot{k}=0$). 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg!https://img.ksmtang.com/obsidian/fallback.jpeg
 	4. The initial value of $c$: When $c$ starts at a point above F, $k$ would eventually be negative; below F, $\lim_{ s \to \infty } e^{-R(s)} e^{(n+g)s}k(s) >0$ indicating that the utility function has not maximised. Therefore $c$ can only be at the level of F, constituting the *saddle path*. 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg
 4. Efficiency: For social planners who control the allocation between $C,K$ directly, to reach Pareto efficiency is to find an allocation path $\{ C(t),K(t) \}_{t=0}^{\infty}$ to maximise $\int_{0}^{\infty} e^{-\rho t}u(C(t))dt$ under the constraint $\dot{k}(t)=f(k(t))-c(t)-(n+g)k(t)$. Households' and firms' behaviour yield the same result. Since planner's choice can maximise the welfare, the competitive equilibrium maximises it as well. (the *first welfare theorem* with dynamics taken into account)
 5. The balanced growth path: Once the economy converges to point E, $c,k,y,s$ are constant and the result of Solow model can be applied. 
 6. The effects of a fall in the discount rate: Note that the stock of capital $k$ cannot change discontinuously. Let $\tilde{c}=c-c^*,\tilde{k}=k-k^*$. Around the BGP we have $\dot{\tilde{c}} \sim \frac{ \partial \dot{c} }{ \partial k } \tilde{k} + \frac{ \partial \dot{c} }{ \partial c } \tilde{c}, \dot{\tilde{k}} \sim \frac{ \partial \dot{k} }{ \partial k } \tilde{k} + \frac{ \partial \dot{k} }{ \partial c } \tilde{c}$. Substitute the dynamics of $c,k$ in, $\dot{\tilde{c}} \sim \frac{f''(k^*)c^*}{\theta} \tilde{k}, \dot{\tilde{k}} \sim \beta \tilde{k}-\tilde{c}$, or $\frac{\dot{\tilde{c}}}{\tilde{c}} \sim \frac{f''(k^*)c^*}{\theta} \frac{\tilde{k}}{\tilde{c}}, \frac{\dot{\tilde{k}}}{\tilde{k}} \sim \beta - \frac{\tilde{c}}{\tilde{k}}$. 
 	1. When $\tilde{c},\tilde{k}$ rise/fall at a same rate, $\frac{\tilde{c}}{\tilde{k}}$ remains constant i.e. the economy moves along a specific line $\tilde{c}=C_{1}e^{\mu t},\tilde{k}=C_{2}e^{\mu t}$ to point E. Actually $\mu^2-\beta \mu + \frac{f''(k^*)c^*}{\theta}=0$ has two solutions $\mu_{1}<0,\mu_{2}>0$, corresponding to line AA(converge to E) and BB(away from E, omitted). 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg!https://img.ksmtang.com/obsidian/fallback.jpeg
 7. The effects of government purchases: Gov buys output at rate $G(t)$(per unit of $AL$ per unit time). The purchases are all devoted to public consumption; financed by taxes of amount $G(t)$. Then $\dot{k}(t)=f(k(t))-c(t){\color{blue} -G(t)}-(n+g)k(t)$(consumption) and $Constraint=k(0) + \int_{0}^{\infty} (w(t){\color{blue} -G(t)}-c(t))e^{(n+g)t-R(t)}dt \geq 0$(tax). 
 	1. A permanent increase in $G(t)$: Since the implication of this increase is even in time, adjusting the time pattern of consumption won't raise the value of $U$. The size of the immediate fall in consumption equals $G(t)$. (compare the case of Solow model where such increase will crowd out investment $I=s(Y-GovPurchase)$)
 	2. A temporary increase in $G(t)$: Note that $c$ cannot change discontinuously at the time that $G$ returns, otherwise the utility function wouldn't be optimal. Households tend to pay the additional taxes from the savings(short-term, thus cut the investment, figure(c))/after reducing consumption(long-term, figure(a)). 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg
 
 
 ## Ch2 Part B The Diamond Model
@@ -81,9 +81,9 @@ publish: true
 	1. Simple case(logarithmic utility($\theta=1$), C-D production): $k_{t+1}= \frac{1}{(1+n)(1+g)} \frac{1}{2+\rho} (1-\alpha)k_{t}^{\alpha}$. From Banach fixed-point theorem we know $k$ would eventually converge to $k^* = \left(  \frac{1}{(1+n)(1+g)} \frac{1}{2+\rho} (1-\alpha) \right)^{1/(1-\alpha)}$. 
 		1. After the economy converges to its BGP, results of Solow model can be applied. 
 		2. A fall in $\rho$ results in a rise in $s$ and $k_{t+1}$. 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg
 	2. Speed of convergence: Let $\lambda = \frac{dk_{t+1}}{dk_{t}}\big|_{k_{t}=k^*}$, $k_{t}-k^* \sim \lambda^t (k_{0}-k^*)$. Actually $\lambda = \alpha$ in the case below. 
 	3. General cases: For example in (a) $k_{1}^*,k_{3}^*$ are stable while $k_{2}^*$ is unstable. 
-!https://img.ksmtang.com/obsidian/fallback.jpeg]
+!https://img.ksmtang.com/obsidian/fallback.jpeg
 5. The possibility of dynamic inefficiency: For example with assumptions of log, C-D and $g=0$, $f'(k^*)=\frac{\alpha}{1-\alpha} (1+n)(2+\rho),f'(k_{GR})=n$. $k^*$ may exceed or fall short of $k_{GR}$. 
 	1. Economy is efficient iff $k^* \leq k_{GR}$: The social planner chooses sequences $\{ C_{1,t},C_{2,t},K_{t+1} \}_{t=0}^{\infty}$ to maximise $\sum_{t=0}^{\infty} e^{-\gamma t}U_{t}$ subject to the constraint of resources. Set Lagrangian $$\mathcal{L} = \sum_{t=0}^{\infty} e^{-\gamma t}\left( \frac{C_{1,t}^{1-\theta}}{1-\theta} + \frac{1}{1+\rho} \frac{C_{2,t+1}^{1-\theta}}{1-\theta} + \lambda_{t}\left( f(k_{t}) - C_{1,t} - \frac{1}{(1+n)(1+g)}C_{2,t} - (1+n)(1+g)k_{t+1} \right) \right).$$First-order conditions are$$\begin{cases} \lambda_{t}=C_{1,t}^{-\theta} & \text{w.r.t } C_{1,t} \\ \frac{C_{2,t+1}^{-\theta}}{1+\rho} = e^{-\gamma} \frac{\lambda_{t+1}}{(1+n)(1+g)} & \text{w.r.t } C_{2,t+1} \\ \lambda_{t}(1+n)(1+g) = e^{-\gamma}\lambda_{t+1}f'(k_{t+1}) & \text{w.r.t } k_{t+1} \end{cases}.$$Hence $\frac{C_{1,t+1}}{C_{1,t}} = \left( \frac{e^{-\gamma}f'(k_{t+1})}{(1+n)(1+g)} \right)^{-\theta}$. In steady state($C_{1,t+1}=C_{1,t},k_{t+1}=k_{t}=k^{SP}$), $f'(k^{SP})=\frac{(1+n)(1+g)}{e^{-\gamma}} \geq n+g = f'(k_{GR})$, or $k^{SP} \leq k_{GR}$. When $k^* > k_{GR}$, $k^*$ can never be $k^{SP}$(or to say that appointing $k$ to be $k_{GR}$ raises consumption in all future periods, a Pareto improvement). Otherwise there exists(guaranteed by the continuity of $e^{-\gamma}$) a sequence $\{ C_{1,t},C_{2,t},K_{t+1} \}_{t=0}^{\infty}$ to make $k^*=k^{SP}$. 
