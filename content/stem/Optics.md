@@ -14,7 +14,7 @@ Optics(Max Born, CUP, 1999)
 	2. The law of refraction: $\frac{\sin\theta_{1}}{\sin\theta_{2}}=\frac{v_{1}}{v_{2}}=:n_{12}$(*refractive index*). An *absolute refractive index* $n:=\frac{c}{v}$ then satisfies $n_{12}=\frac{n_{2}}{n_{1}}$. 
 		1. Equivalent to that the wave-front is continuous, or the intersection of the incident and refracted wave moves at a same speed on both sides of the boundary, $v_{1}=v'\sin\theta_{1},v_{2}=v'\sin\theta_{2}$. 
 		2. Maxwell's formula: $n=\sqrt{ \varepsilon \mu }$. In fact $\mu$ is close to unity for most of nonmagnetic substances. 
-![](https://img.ksmtang.com/obsidian/Pasted image 20260614225422.png)
+<img src="https://img.ksmtang.com/obsidian/724244e4dc099c306ad4906665676d46.png" alt="Pasted image 20260614225422.png" />
 3. Scalar waves: Solving $\nabla^2V- \frac{1}{v^2}\frac{ \partial^2 V }{ \partial t^2 }=0$. 
 	1. Plane waves: $V=V(r\cdot s,t)$ where $r=r(x,y,z)$ is a position vector and $s=s(s_{x},s_{y},s_{z})$ is a unit vector in a fixed direction. The term "plane wave" is due to that $V$ holds constant over planes $r \cdot s = const$ which are perpendicular to $s$. We may take $\zeta=r \cdot s$ and find $\nabla^2V=\frac{ \partial^2 V }{ \partial \zeta^2 }$, simplifying the equation to $\frac{ \partial^2 V }{ \partial (\zeta -vt) \partial (\zeta+vt) }=0$. The general solution is $V=V_{1}(\zeta -vt)+V_{2}(\zeta +vt)$. $V_{1}$ holds constant for $(\zeta,t)\to(\zeta+v\tau ,t+\tau)$. Therefore it represents a disturbance propagated with $v$ in the $+\zeta$ direction. Likewise $V_{2}$ -> $-\zeta$ direction. 
-![](https://img.ksmtang.com/obsidian/Pasted image 20260614230635.png)
+<img src="https://img.ksmtang.com/obsidian/b26e8790086d97eed43ee9c5a6477ef4.png" alt="Pasted image 20260614230635.png" />
