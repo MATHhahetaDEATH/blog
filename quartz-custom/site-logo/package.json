@@ -1,0 +1,38 @@
+{
+  "name": "@ksmtang/site-logo",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "quartz": {
+    "name": "site-logo",
+    "displayName": "Site Logo",
+    "category": "component",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOptions": {
+      "href": "/",
+      "src": "https://img.ksmtang.com/logo.svg",
+      "alt": "Kasumi Tang",
+      "width": 240,
+      "height": 80
+    },
+    "components": {
+      "SiteLogo": {
+        "displayName": "Site Logo",
+        "defaultPosition": "left",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

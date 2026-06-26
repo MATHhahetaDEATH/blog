@@ -1,0 +1,44 @@
+{
+  "name": "@ksmtang/giscus-comments",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "quartz": {
+    "name": "giscus-comments",
+    "displayName": "Giscus Comments",
+    "category": "component",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOptions": {
+      "repo": "MATHhahetaDEATH/blog",
+      "repoId": "R_kgDOTEoNZw",
+      "category": "General",
+      "categoryId": "DIC_kwDOTEoNZ84C_6-T",
+      "mapping": "pathname",
+      "strict": false,
+      "reactionsEnabled": true,
+      "emitMetadata": false,
+      "inputPosition": "bottom",
+      "theme": "preferred_color_scheme",
+      "lang": "zh-CN"
+    },
+    "components": {
+      "GiscusComments": {
+        "displayName": "Giscus Comments",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

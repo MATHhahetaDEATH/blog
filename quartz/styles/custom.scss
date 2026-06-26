@@ -1,3 +1,236 @@
 @use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+/* sacramento-latin-400-normal */
+@font-face {
+  font-family: "Sacramento";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url("https://cdn.jsdelivr.net/fontsource/fonts/sacramento@latest/latin-400-normal.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/fontsource/fonts/sacramento@latest/latin-400-normal.woff")
+      format("woff");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* kiwi-maru-latin-400-normal */
+@font-face {
+  font-family: "Kiwi Maru";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url("https://cdn.jsdelivr.net/fontsource/fonts/kiwi-maru@latest/latin-400-normal.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/fontsource/fonts/kiwi-maru@latest/latin-400-normal.woff")
+      format("woff");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* noto-serif-tc-latin-wght-normal */
+@font-face {
+  font-family: "Noto Serif TC Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url("https://cdn.jsdelivr.net/fontsource/fonts/noto-serif-tc:vf@latest/latin-wght-normal.woff2")
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* cactus-classical-serif-latin-400-normal */
+@font-face {
+  font-family: "Cactus Classical Serif";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src:
+    url("https://cdn.jsdelivr.net/fontsource/fonts/cactus-classical-serif@latest/latin-400-normal.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/fontsource/fonts/cactus-classical-serif@latest/latin-400-normal.woff")
+      format("woff");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --ksm-sidebar-font: "Kiwi Maru", var(--bodyFont);
+  --ksm-title-font: "Noto Serif TC Variable", "Noto Serif TC", var(--headerFont);
+  --ksm-body-font: "Cactus Classical Serif", var(--bodyFont);
+  --ksm-date-font: "Sacramento", cursive;
+  --ksm-theme-accent: rgb(121, 114, 85);
+  --ksm-soft-text: rgb(251, 248, 248);
+}
+
+body {
+  font-family: var(--ksm-body-font);
+}
+
+.sidebar {
+  font-family: var(--ksm-sidebar-font);
+}
+
+.article-title,
+article > h1:first-child {
+  font-family: var(--ksm-title-font);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.content-meta {
+  color: var(--gray);
+  font-family: var(--ksm-date-font);
+  font-size: 1.2rem;
+  line-height: 1.35rem;
+}
+
+.content-meta span,
+.content-meta time {
+  color: var(--gray);
+}
+
+.left.sidebar {
+  gap: 1.35rem;
+}
+
+.right.sidebar {
+  gap: 1.1rem;
+}
+
+.right.sidebar .flex-component {
+  width: 100%;
+  align-items: center;
+}
+
+.right.sidebar .search {
+  flex: 1 1 auto;
+}
+
+.right.sidebar .darkmode,
+.right.sidebar .reader-mode {
+  flex: 0 0 auto;
+}
+
+.right.sidebar h3 {
+  font-family: var(--ksm-sidebar-font);
+  font-weight: 400;
+}
+
+.page > #quartz-body footer.ksm-footer {
+  grid-column: 1 / -1;
+  max-width: unset;
+  min-width: 100%;
+  width: 100vw;
+  margin-top: min(80vh, 80dvh);
+  margin-left: calc(50% - 50vw);
+  margin-right: 0;
+}
+
+:root[data-ksm-footer-mode="on"] .sidebar.left,
+:root[data-ksm-footer-mode="on"] .sidebar.right,
+:root[data-ksm-footer-mode="on"] .sidebar.left:hover,
+:root[data-ksm-footer-mode="on"] .sidebar.right:hover {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.page-listing {
+  margin-top: 2rem;
+}
+
+.page-listing h3,
+.page-listing a {
+  font-family: var(--ksm-sidebar-font);
+}
+
+.sidebar a,
+.sidebar button,
+.ksm-sidebar-section-preview-label,
+.ksm-sidebar-section-preview-title,
+.ksm-sidebar-discussions-title,
+.ksm-sidebar-discussion-link,
+.ksm-footer h2,
+.ksm-footer-bottom p,
+.ksm-nav-button,
+.ksm-diary-title {
+  color: var(--ksm-theme-accent);
+}
+
+.ksm-footer a,
+.ksm-footer-quick-link span,
+.ksm-footer-link,
+.ksm-footer-bottom a,
+.ksm-social-button {
+  color: var(--ksm-soft-text);
+}
+
+[saved-theme="dark"] body,
+[saved-theme="dark"] p,
+[saved-theme="dark"] ul,
+[saved-theme="dark"] text,
+[saved-theme="dark"] tr,
+[saved-theme="dark"] td,
+[saved-theme="dark"] li,
+[saved-theme="dark"] ol,
+[saved-theme="dark"] .katex,
+[saved-theme="dark"] .math,
+[saved-theme="dark"] .typst-doc,
+[saved-theme="dark"] g[class~="typst-text"],
+[saved-theme="dark"] article {
+  color: var(--ksm-soft-text);
+  fill: var(--ksm-soft-text);
+}
+
+.ksm-calendar-day.has-entry {
+  color: var(--ksm-theme-accent);
+  text-decoration: none;
+  position: relative;
+}
+
+.page-footer .ksm-footer {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.giscus {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+@media all and ($mobile) {
+  .left.sidebar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .right.sidebar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .right.sidebar > * {
+    max-height: none;
+  }
+
+  .content-meta {
+    font-size: 1.05rem;
+  }
+
+  .page > #quartz-body footer.ksm-footer {
+    margin-top: 50vh;
+  }
+}

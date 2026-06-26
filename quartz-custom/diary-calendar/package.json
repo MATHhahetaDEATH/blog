@@ -1,0 +1,37 @@
+{
+  "name": "@ksmtang/diary-calendar",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "quartz": {
+    "name": "diary-calendar",
+    "displayName": "Diary Calendar",
+    "category": "component",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOptions": {
+      "folder": "dairy",
+      "title": "ダイアリー",
+      "recentLabel": "最近のダイアリー",
+      "weekStartsOn": 1
+    },
+    "components": {
+      "DiaryCalendar": {
+        "displayName": "Diary Calendar",
+        "defaultPosition": "left",
+        "defaultPriority": 30
+      }
+    }
+  }
+}

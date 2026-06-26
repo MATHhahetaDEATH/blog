@@ -1,6 +1,6 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Kasumi Tang
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
@@ -13,11 +13,12 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    fontOrigin: local
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      title: Kiwi Maru
+      header: Noto Serif TC
+      body: Cactus Classical Serif
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -26,7 +27,7 @@ configuration:
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
         dark: "#2b2b2b"
-        secondary: "#284b63"
+        secondary: "rgb(121, 114, 85)"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
@@ -36,7 +37,7 @@ configuration:
         gray: "#646464"
         darkgray: "#d4d4d4"
         dark: "#ebebec"
-        secondary: "#7b97aa"
+        secondary: "rgb(121, 114, 85)"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
@@ -72,7 +73,7 @@ plugins:
     order: 50
     layout:
       position: right
-      priority: 30
+      priority: 50
   - source: github:quartz-community/crawl-links
     enabled: true
     options:
@@ -100,6 +101,15 @@ plugins:
     order: 92
   - source: github:quartz-community/fonts
     enabled: true
+    options:
+      useThemeFonts: false
+      fontOrigin: local
+      title: Kiwi Maru
+      interface: Kiwi Maru
+      header: Noto Serif TC
+      h1: Noto Serif TC
+      body: Cactus Classical Serif
+      code: IBM Plex Mono
   - source: github:quartz-community/remove-draft
     enabled: true
   - source: github:quartz-community/explicit-publish
@@ -126,7 +136,7 @@ plugins:
   - source: github:quartz-community/favicon
     enabled: true
   - source: github:quartz-community/og-image
-    enabled: true
+    enabled: false
   - source: github:quartz-community/cname
     enabled: true
   - source: github:quartz-community/canvas-page
@@ -138,7 +148,7 @@ plugins:
   - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 50
@@ -146,11 +156,11 @@ plugins:
     enabled: true
     layout:
       position: right
-      priority: 10
+      priority: 40
   - source: github:quartz-community/search
     enabled: true
     layout:
-      position: left
+      position: right
       priority: 20
       group: toolbar
       groupOptions:
@@ -159,7 +169,7 @@ plugins:
     enabled: true
     layout:
       position: right
-      priority: 50
+      priority: 60
   - source: github:quartz-community/article-title
     enabled: true
     layout:
@@ -176,20 +186,20 @@ plugins:
       position: beforeBody
       priority: 30
   - source: github:quartz-community/page-title
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 10
   - source: github:quartz-community/darkmode
     enabled: true
     layout:
-      position: left
+      position: right
       priority: 30
       group: toolbar
   - source: github:quartz-community/reader-mode
     enabled: true
     layout:
-      position: left
+      position: right
       priority: 35
       group: toolbar
   - source: github:quartz-community/breadcrumbs
@@ -199,32 +209,32 @@ plugins:
       priority: 5
       condition: not-index
   - source: github:quartz-community/comments
-    enabled: true
+    enabled: false
     options:
       provider: giscus
       options:
-        repo: TODO:username/repo-name
-        repoId: TODO:your-repo-id
-        category: Announcements
-        categoryId: TODO:your-category-id
-        mapping: url
-        strict: true
+        repo: MATHhahetaDEATH/blog
+        repoId: R_kgDOTEoNZw
+        category: General
+        categoryId: DIC_kwDOTEoNZ84C_6-T
+        mapping: pathname
+        strict: false
         reactionsEnabled: true
+        emitMetadata: false
         inputPosition: bottom
-        lightTheme: light
-        darkTheme: dark
-        lang: en
+        theme: preferred_color_scheme
+        lang: zh-CN
     layout:
       position: afterBody
       priority: 10
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links:
         GitHub: https://github.com/jackyzha0/quartz
         Discord Community: https://discord.gg/cRFFHYye7t
   - source: github:quartz-community/recent-notes
-    enabled: true
+    enabled: false
     options:
       title: Recent Notes
       limit: 5
@@ -241,6 +251,137 @@ plugins:
       position: left
       priority: 25
       display: mobile-only
+  - source: ./quartz-custom/site-logo
+    enabled: true
+    options:
+      href: /
+      src: https://img.ksmtang.com/logo.svg
+      alt: Kasumi Tang
+      width: 240
+      height: 80
+    layout:
+      position: left
+      priority: 10
+  - source: ./quartz-custom/sidebar-section
+    enabled: true
+    options:
+      title: Moments
+      href: /journal_flow/
+      folder: journal_flow
+      showPreview: true
+      previewLabel: 最新的
+      previewChars: 50
+    layout:
+      position: left
+      priority: 20
+  - source: ./quartz-custom/sidebar-section
+    enabled: true
+    options:
+      title: 過期思想
+      href: /deprecated/
+      folder: deprecated
+      showPreview: false
+    layout:
+      position: left
+      priority: 25
+  - source: ./quartz-custom/sidebar-section
+    enabled: true
+    options:
+      title: 笔记分享
+      href: /stem/
+      folder: stem
+      showPreview: false
+    layout:
+      position: left
+      priority: 30
+  - source: ./quartz-custom/diary-calendar
+    enabled: true
+    options:
+      folder: dairy
+      title: ダイアリー
+      recentLabel: 最近のダイアリー
+      previewChars: 50
+      weekStartsOn: 1
+    layout:
+      position: left
+      priority: 35
+  - source: ./quartz-custom/sidebar-discussions
+    enabled: true
+    options:
+      repo: MATHhahetaDEATH/blog
+      limit: 3
+      maxChars: 50
+      title: 最近讨论
+    layout:
+      position: left
+      priority: 40
+  - source: ./quartz-custom/site-map-link
+    enabled: true
+    options:
+      label: Site Map
+      href: /index/
+    layout:
+      position: right
+      priority: 25
+  - source: ./quartz-custom/sidebar-divider
+    enabled: true
+    layout:
+      position: right
+      priority: 30
+  - source: ./quartz-custom/footer
+    enabled: true
+    options:
+      quickLinks:
+        - label: Moments
+          href: /journal_flow/
+          description: 威力加强版的朋友圈
+        - label: ダイアリー
+          href: /dairy/
+          description: 快来这里「视奸」我
+        - label: 過期思想
+          href: /deprecated/
+          description: 「Paradigm Shift」的灰燼
+        - label: 笔记分享
+          href: /stem/
+          description: 所有（未完成）笔记的归档
+      aboutLinks:
+        - label: About
+          href: https://www.ksmtang.com/about
+        - label: Site Map
+          href: /index/
+      links:
+        - label: かすみのサイト
+          href: https://www.ksmtang.com/
+          description: 主站
+        - label: XYX's Website
+          href: https://xyx.1919810.com/
+          description: "A small website. 一个很普通的小站. "
+      socialLinks:
+        - label: GitHub
+          href: https://github.com/MATHhahetaDEATH
+        - label: Bilibili
+          href: https://space.bilibili.com/322168286
+        - label: Weixin
+          popup: KASUMI和他愉快的伙伴们
+        - label: Zhihu
+          popup: 晨沐公
+  - source: ./quartz-custom/giscus-comments
+    enabled: true
+    options:
+      repo: MATHhahetaDEATH/blog
+      repoId: R_kgDOTEoNZw
+      category: General
+      categoryId: DIC_kwDOTEoNZ84C_6-T
+      mapping: pathname
+      strict: false
+      reactionsEnabled: true
+      emitMetadata: false
+      inputPosition: bottom
+      theme: preferred_color_scheme
+      lang: zh-CN
+    layout:
+      position: afterBody
+      priority: 10
   - source: github:quartz-community/bases-page
     enabled: true
     options: {}
@@ -265,7 +406,7 @@ plugins:
 layout:
   groups:
     toolbar:
-      priority: 35
+      priority: 10
       direction: row
       gap: 0.5rem
   byPageType:
@@ -278,12 +419,8 @@ layout:
     folder:
       exclude:
         - reader-mode
-      positions:
-        right: []
     tag:
       exclude:
         - reader-mode
-      positions:
-        right: []
     canvas: {}
     bases: {}

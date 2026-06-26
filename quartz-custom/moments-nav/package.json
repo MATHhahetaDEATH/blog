@@ -1,0 +1,36 @@
+{
+  "name": "@ksmtang/moments-nav",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "types": "./dist/components/index.d.ts",
+      "import": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "quartz": {
+    "name": "moments-nav",
+    "displayName": "Moments Navigation",
+    "category": "component",
+    "version": "0.1.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOptions": {
+      "title": "Moments",
+      "href": "/journal_flow/",
+      "subtitle": "Lorem ipsum"
+    },
+    "components": {
+      "MomentsNav": {
+        "displayName": "Moments Navigation",
+        "defaultPosition": "left",
+        "defaultPriority": 20
+      }
+    }
+  }
+}
